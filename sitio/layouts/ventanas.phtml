@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+	    <meta name="author" content="RR.HH">
+	    <meta name="description" content="<?php echo $this->meta->getDescription()?>">
+	    <meta name="keywords" content="<?php echo $this->meta->getKeywords() ?>">
+	    <title><?php echo $this->meta->getTitle() ?></title>
+		
+					
+		<link rel="stylesheet" type="text/css" href="/css/app.css">
+		<link rel="stylesheet" type="text/css" href="/css/ventanas.css">
+	    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/img/favicon.ico">
+    	
+    </head>
+    <body>	
+    	<header id="cabecera">
+            <?php echo $this->partial('sitio/partial/cabecera.phtml',  array("usuario" => $this->usuario)) ?>
+    	</header>
+		
+        <section id="escritorio">
+			<?php echo $this->content; ?>
+        </section>
+
+        <section id="barra-tareas">
+            <div id="agregar-ventana" title="Agrege una nueva ventana.">&plus;</div>
+			<div id="agregar-ventana-menu" class="fitcont centrado" style="display: none;">
+				<p id="agregar-ventana-msg" class="msg">&nbsp;</p>
+				<img id="agregar-ventana-espera" class="espara-icon" src="/img/cargando.gif" />
+				<form id="agregar-ventana-form" action="javascript:void(0);">
+					<div class="divform" id="agregar-ventana-sec-tipo">
+						<label for="agregar-ventana-tipo">Elija como se verá el recurso en la ventana nueva: </label>
+						<select id="agregar-ventana-tipo">
+							<option value="vista">Vista - Tabla con todos los registros.</option>
+							<option value="registro">Registro - Un único registro.</option>
+						</select>
+					</div>
+					<div class="divform" id="agregar-ventana-sec-objeto">
+						<img id="agregar-ventana-objeto-espera" class="espara-icon" src="/img/cargando.gif" />
+						<label for="agregar-ventana-objeto">Elija el tipo de recurso de la ventana nueva: </label>
+						<select id="agregar-ventana-objeto">
+							
+						</select>
+					</div>
+					<div class="divform" id="agregar-ventana-sec-param">
+						<img id="agregar-ventana-param-espera" class="espara-icon" src="/img/cargando.gif" />
+						<label for="agregar-ventana-param">Elija el recurso: </label>						
+						<select id="agregar-ventana-param">
+							
+						</select>
+					</div>
+					<input id="agregar-ventana-btn-crear" type="submit" value="Crear" />
+				</form>
+			</div>
+		</section>
+       
+       
+<input type="hidden" id="csrf" value="<?php echo $this->csrf?>">   
+
+<script type="text/javascript" src="/js/app.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/ventanas.js" charset="utf-8"></script>
+
+</body>
+</html>

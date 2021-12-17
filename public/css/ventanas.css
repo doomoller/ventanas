@@ -1,0 +1,176 @@
+
+
+#escritorio{ 
+    background-size: 40px 40px;
+    background-image: radial-gradient(circle, #000000 1px, rgba(0, 0, 0, 0) 1px); 
+    width: 100%; height: 100%;position:fixed;left:0px;top:6em;z-index: 0; display: block;
+    
+}
+#barra-tareas{
+    background: royalblue;
+    color: #fff;
+    width: 100%; height: 2%;
+    min-height: 20px;
+    display: block;
+    position:fixed;left:0px;bottom:0px;z-index: 1000;
+}
+#agregar-ventana{
+    background: #00c7c7;
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0px;
+    width: 1em; height: 1em;
+    font-size: 5rem;
+    line-height: 1em;
+    position:absolute;
+    left: 1%;
+    bottom: 0px;
+    border:none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#agregar-ventana:hover{
+    background: #fff;
+    color: #00c0c7;
+    cursor: pointer;
+}
+#agregar-ventana-menu
+{
+    display: none;
+    position: fixed;
+    bottom: 5em;
+    left: 1em;
+    z-index: 1000;
+}
+.ventana{
+    background: rgb(219, 218, 218);
+    width: fit-content; height:fit-content;
+    position:fixed;
+    left: 10%;
+    top: 20%;
+    display: block;
+    border:none;
+    border-radius: 5px;
+    overflow:auto;
+    resize: both;
+    font-size: 1rem;
+    box-shadow: inset rgba(60, 66, 87, 0.62) 0px 0px 0.9em 0.2em, rgba(85, 85, 85, 0.62) 0px 0px 0.9em 0.2em;
+}
+.ventana .cabecera{
+    background: royalblue;
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1em;
+    width: 100%; height: 2em;
+    display: block;
+    border:none; 
+    box-shadow: inset rgba(0, 42, 191, 0.62) 0px 0px 0.4em 0.1em;
+}
+.ventana .contenido{
+    color: black;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1em;
+    width: fit-content; height:fit-content;
+    display: block;
+    border:none;
+    padding:0.4em;
+    overflow: auto;
+}
+.ventana .cabecera .drag-punto{
+    background: #444444;
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0px;
+    line-height: 2em;
+    font-size: 1.0em;
+    width: 2em; height: 2em;
+    float: left;
+    cursor: move;
+}
+
+.ventana .cabecera .titulo{
+    color: #fff;
+    font-weight: normal;
+    font-style: normal;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    padding: 0px 0px 0px 0.9em;
+    line-height: 2em;
+    font-size: 1.1empx;
+    width: fit-content; height: 2em;
+    float: left;
+    border:none;    
+}
+
+.ventana .cabecera .btn{
+    background: #444444;
+    color: #fff;
+    font-weight: bold;
+    font-style: normal;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0px;
+    margin: 0px 0px 0px 0.15em;
+    line-height: 2em;
+    font-size: 1.0em;
+    width: 2em; height: 2em;
+    float: right;
+    border:none;    
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+.ventana .cabecera .btn:hover
+{
+    background: #fff;
+    color: #444444;
+    cursor: pointer;
+}
+
+
+.v-std{font-size: 1.0em;background:#6495ed;padding:0px;margin:0px auto;border-radius:0.9em;display:block;box-sizing: border-box;width: fit-content;overflow:hidden}
+.v-std .foto{height:1.4em;width:auto;max-width:1.4em;border: none;border-radius:2px;}
+.v-std .tit{font-size:1.1em;color: rgb(0, 36, 71);font-weight: bold; padding: 0.15em 0.9em;width: fit-content;display: inline-block;}
+.v-std table{padding:0px;margin:0px;border:none;border-spacing: 0px;}
+.v-std td{padding:0.15em 0.2em;font-size: 1.0em;color: black;vertical-align: middle;white-space: nowrap;}
+.v-std th{padding:0.15em 0.2em;font-size: 1.0em;color: rgb(190, 190, 190);background-color: #213ed2;vertical-align: middle;white-space: nowrap;}
+.v-std th.orden{background-color: #005c07;}
+.v-std th:hover{background-color: #243797;}
+.v-std th a{color:#fff;text-decoration:none;margin:0 0.2em;}
+.v-std th a:hover{color:#f9f459;text-decoration:underline;cursor: pointer;}
+.v-std th a:visited{color:#fff;text-decoration:none}
+.v-std th a:visited:hover{color:#f9f459;text-decoration:underline;cursor: pointer;}
+.v-std th a:focus{color:#fff;text-decoration:none}
+.v-std span{font-size:1.1em;color: rgb(0, 36, 71);font-style: italic;}
+.v-std .par{background-color: #fff;}
+.v-std .impar{background-color: #ddd;}
+.v-std .tpie{padding:2px;background-color: #213ed2;color: #f9f459;font-weight: bold;text-align: center;width: 100%;}
+.v-std .tpie span{color:#f9f459;}
+.v-std .tpie a{color:#fff;text-decoration:none;margin-left: 0.1em;}
+.v-std .tpie a:hover{color:#f9f459;text-decoration:underline;cursor: pointer;}
+.v-std .tpie a:visited{color:#fff;text-decoration:none}
+.v-std .tpie a:visited:hover{color:#f9f459;text-decoration:underline;cursor: pointer;}
+.v-std .tpie a:focus{color:#fff;text-decoration:none}
+.v-std .boton{cursor: pointer; display:inline-block;box-sizing:border-box;background-color:#408080;color:#fff;text-decoration:none;font-size:1rem;border:solid 0px #ddd;border-radius:0.2em;padding:0.2em 0.4em;}
+.v-std .boton:hover{background-color:#404040;color:#fff;text-decoration:none;border:solid 0px #000;}
+.v-std .boton:visited:hover{background-color:#404040;color:#fff;text-decoration:none;border:solid 0px #000;}
+.v-std .boton:visited{background-color:#408080;color:#fff;text-decoration:none}
+.v-std .boton:focus{background-color:#404040;color:#fff;text-decoration:none}
+
+.v-detalles{display:block;box-sizing: border-box;width: fit-content;}
+.v-detalles .item{position: relative;float:left; width: fit-content;height: fit-content;margin:0.2em;padding:0px;background: white;border: solid 1px rgb(122, 122, 122); border-radius: 1em 0.15em 1em 0.15em; box-sizing: border-box; overflow: hidden;white-space: nowrap;}
+.v-detalles .campo{display: inline-block; background: rgb(73, 73, 73);color: white;font-size: 1em;padding: 0.18em 0.3em;}
+.v-detalles .valor{display: inline-block; background: white;color: black;font-size: 1em;padding: 0.18em 0.3em;}
+.v-detalles .foto{height:7em;width:auto;max-width:7em;border: none;border-radius:0.16em;}
+.v-detalles .boton{position:absolute;bottom: 0.9em; right: 0.9em; box-sizing:border-box;background-color:#408080;color:#fff;text-decoration:none;font-size:1em;border:solid 0px #ddd;border-radius:0.3em;padding:0.3em;}.boton:hover{background-color:#404040;color:#fff;text-decoration:none;border:solid 0px #000;}.boton:visited:hover{background-color:#404040;color:#fff;text-decoration:none;border:solid 0px #000;}.boton:visited{background-color:#408080;color:#fff;text-decoration:none}.boton:focus{background-color:#404040;color:#fff;text-decoration:none}
