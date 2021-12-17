@@ -2,6 +2,19 @@
 
 require_once 'sitio/src/AppBase.php';
 
+/*
+	Gestiona las ventanas en Backend.
+    No hay un tipo definido para las ventanas, aquí se proporciona una forma general básica 
+    donde se guardan como una string separado por #. Eje 1#vista#usuarios#0
+        primero:    el id de usuario
+        segundo:    el tipo de ventana, o sea, tipo de controlador de ventana
+        tercero:    el objeto del contenido
+        cuarto:     un parametro multipropocito, eje, id de usuario a mostrar o id de vista
+
+    Los objetos de contenido y sus opciones para crear las ventanas se proporcionan como ejemplo
+    en los metodos "describir" y "opciones" enrutados a ésta clase, pero usted puede hacerlo
+    como guste.
+*/
 class Ventanas extends AppBase
 {
     function __construct($main)

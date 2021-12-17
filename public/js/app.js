@@ -1,3 +1,8 @@
+/*
+	La clase AppObjetos gestiona la carga de los objetos y sus opciones 
+	para mostrar en las ventanas. La clase escritorio crea y gestiona
+	las ventanas basado en la información de esta clase.
+*/
 
 function AjaxObjeto()
 {

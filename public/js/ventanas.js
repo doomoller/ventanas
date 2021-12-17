@@ -1,3 +1,19 @@
+/*
+	La clase AppObjetos gestiona la carga de los objetos y sus opciones 
+	para mostrar en las ventanas. La clase escritorio crea y gestiona
+	las ventanas basado en la información de esta clase.
+
+    La clase Ventana gestiona la UI de ventana, y el contenido lo gestiona
+    su controladora que se crea para cada tipo de ventana. Se proporcionan
+    2 tipos de controladora, Vista y Registro, y la clase base Controlador.
+    La clase ControladorVista muestra una lista de registro en forma de 
+    tabla. La clase ControladorRegistro muestra un único registro. 
+    Vista también permite crear ventanas de registros únicos desde su tabla.
+    Eje, se listan los usuarios en una tabla, y el id de usuario es un
+    link para crear una ventana de Registro de ese usuario.
+
+*/
+
 
 function Controlador(_tipo, _objeto, _param)
 {

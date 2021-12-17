@@ -2,6 +2,9 @@
 require_once 'sitio/src/Request.php';
 require_once 'sitio/src/DB.php';
 
+/*
+	Dummy data para el ejemplo. Debe crear la logica para cargar los datos des la BD.
+*/
 class Vista 
 {
     public string $nombre = "";

@@ -3,6 +3,9 @@
 require_once 'sitio/src/AppBase.php';
 require_once 'sitio/src/Vista.php';
 
+/*
+	Dummy data para el ejemplo. Debe crear la logica para cargar los datos des la BD.
+*/
 class Usuarios extends AppBase
 {
 	
