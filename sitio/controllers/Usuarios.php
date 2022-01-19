@@ -21,7 +21,23 @@ class Usuarios extends AppBase
 
 		$data['campos'] = array('id', 'nombre', 'apellido', 'correo');
 		$data['etiqueta'] = array('id' => 'ID', 'nombre' => 'Nombre', 'apellido' => 'Apellido', 'correo' => 'Correo');
-		$data['datos'] = array('id' => 1, 'nombre' => 'Pedro', 'apellido' => 'Da Rosa', 'correo' => 'pedro2382329@test.dummy');
+
+		$tmp = array();
+		$tmp[] = array('id' => '1', 'nombre' => 'Carlos', 'apellido' => 'Kartz', 'correo' => 'carloskartz@test.dummy');
+        $tmp[] = array('id' => '2', 'nombre' => 'Gustavo', 'apellido' => 'Gomez', 'correo' => 'gustavo8282@test.dummy');
+        $tmp[] = array('id' => '3', 'nombre' => 'Federico', 'apellido' => 'Perez', 'correo' => 'federico382193@test.dummy');
+        $tmp[] = array('id' => '4', 'nombre' => 'Susana', 'apellido' => 'Rodriguez', 'correo' => 'susana3232@test.dummy');
+        $tmp[] = array('id' => '5', 'nombre' => 'Maria', 'apellido' => 'Suarez', 'correo' => 'maria3232@test.dummy');
+        $tmp[] = array('id' => '6', 'nombre' => 'Tereza', 'apellido' => 'Olivera', 'correo' => 'tereza3232@test.dummy');
+        $tmp[] = array('id' => '7', 'nombre' => 'Julio', 'apellido' => 'Massino', 'correo' => 'julio232@test.dummy');
+        $tmp[] = array('id' => '8', 'nombre' => 'Juan', 'apellido' => 'Bentancour', 'correo' => 'juan23232@test.dummy');
+        $tmp[] = array('id' => '9', 'nombre' => 'Beatriz', 'apellido' => 'Vera', 'correo' => 'beatriz53453@test.dummy');
+        $tmp[] = array('id' => '10', 'nombre' => 'Vanesa', 'apellido' => 'Garcia', 'correo' => 'vanesa43423@test.dummy');
+		$tmp[] = array('id' => '11', 'nombre' => 'Hector', 'apellido' => 'Frank', 'correo' => 'hector3232@test.dummy');
+        $tmp[] = array('id' => '12', 'nombre' => 'Damian', 'apellido' => 'Kal', 'correo' => 'damian2312@test.dummy');
+
+		$r = $this->main->getRequest();
+		$data['datos'] = $tmp[$r->getMetodoParametro('id') - 1];
 
 		return $this->view("sitio/layouts/default.phtml", $data, $this->metas, "sitio/views/general.phtml");
 	}

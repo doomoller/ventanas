@@ -27,8 +27,8 @@ class Ventanas extends AppBase
     {   
         // si hay ventanas guardadas se cargan al presentar el escritorio
         $data = array('ventanas' => array());
-        $data['ventanas'][] = '1#registro#usuarios#1';
-        $data['ventanas'][] = '1#vista#usuarios#0';
+        $data['ventanas'][] = array('clave' => '1#registro#usuarios#1', 'estado' => '{"caja":{"x":35,"y":103,"w":441,"h":232},"estado":"normal"}');
+        $data['ventanas'][] = array('clave' => '1#vista#usuarios#0', 'estado' => '{"caja":{"x":1221,"y":353,"w":456,"h":222},"estado":"normal"}');
         return $this->view("sitio/layouts/ventanas.phtml", $data, $this->metas, "sitio/views/ventanas/ventanas.phtml");
     }
     public function guardarAction()
